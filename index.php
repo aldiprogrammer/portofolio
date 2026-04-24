@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id" class="dark scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Modern Hijau</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#22c55e', // hijau
+                        primaryDark: '#16a34a'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition duration-500">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full backdrop-blur bg-white/70 dark:bg-gray-900/70 shadow z-50">
+        <div class="max-w-6xl mx-auto flex justify-between items-center px-4 py-3">
+            <h1 class="font-bold text-xl text-primary">AldiDev</h1>
+            <div class="flex items-center gap-4">
+                <a href="#home">Home</a>
+                <a href="#about">Profil</a>
+                <a href="#projects">Project</a>
+                <a href="#experience">Pengalaman</a>
+                <a href="#contact">Kontak</a>
+                <button onclick="toggleDark()" class="px-3 py-1 rounded bg-gray-200 dark:bg-gray-700">
+                    🌙
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="h-screen flex flex-col justify-center items-center text-center px-4 bg-cover bg-center relative" style="background-image: url('https://wallpapers.com/images/hd/4k-programming-background-a9q71z7kd0581lgo.jpg');">
+
+        <!-- Overlay biar teks tetap jelas -->
+        <div class="absolute inset-0 bg-black/60"></div>
+
+        <div class="relative z-10">
+            <img src="img/pp.jpeg" class="w-32 h-32 rounded-full border-4 border-primary shadow-lg mb-6 mx-auto" data-aos="zoom-in">
+            <h1 class="text-5xl font-bold text-white" data-aos="fade-up">ALDI</h1>
+            <p id="typing" class="text-gray-200 mt-2"></p>
+        </div>
+
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-20 max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-6 text-primary" data-aos="fade-right">Profil</h2>
+        <p class="text-gray-600 dark:text-gray-300" data-aos="fade-left">
+            Saya membangun aplikasi web modern menggunakan Laravel dan React yang cepat, aman, dan scalable. Saya adalah pribadi yang profesional, detail-oriented, dan berkomitmen untuk memberikan solusi terbaik di setiap project.
+        </p>
+    </section>
+
+    <!-- Projects -->
+    <!-- Projects -->
+    <section id="projects" class="py-20 bg-gray-100 dark:bg-gray-800">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-10 text-primary" data-aos="fade-up">Projects</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <!-- Project 1 -->
+                <div class="bg-white dark:bg-gray-900 rounded-2xl shadow overflow-hidden hover:scale-105 transition" data-aos="zoom-in">
+                    <img src="img/ptsan.png" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-xl">Website Company Profile</h3>
+                        <p class="text-gray-500 text-sm">PT Sinar Aneka Niaga</p>
+                        <a href="https://ptsinaranekaniaga.com" target="_blank" class="inline-block mt-3 text-primary hover:underline">Lihat Aplikasi →</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white dark:bg-gray-900 rounded-2xl shadow overflow-hidden hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="img/bt.png" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-xl">Website Company Profile</h3>
+                        <p class="text-gray-500 text-sm">Bathroom Boutique</p>
+                        <a href="https://bathroomboutiquemedan.com/" target="_blank" class="inline-block mt-3 text-primary hover:underline">Lihat Aplikasi →</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white dark:bg-gray-900 rounded-2xl shadow overflow-hidden hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="img/mmsc.png" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-xl">Aplikasi Medan Mini Soccer</h3>
+                        <p class="text-gray-500 text-sm">Aplikasi Booking Lapangan Minisoccer</p>
+                        <a href="https://www.minisoccermedan.com/home" target="_blank" class="inline-block mt-3 text-primary hover:underline">Lihat Aplikasi →</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white dark:bg-gray-900 rounded-2xl shadow overflow-hidden hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="img/gestun.png" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-xl">Pengelolahan Keuangan</h3>
+                        <p class="text-gray-500 text-sm">Sistem Pengelolaan Keuangan Gestunmall</p>
+                        <a href="https://gestunmall.id/" target="_blank" class="inline-block mt-3 text-primary hover:underline">Lihat Aplikasi →</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white dark:bg-gray-900 rounded-2xl shadow overflow-hidden hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="img/pos.png" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-xl">Aplikasi POS</h3>
+                        <p class="text-gray-500 text-sm">Sistem Delivery Caffe & Pos</p>
+                        <a href="https://robintang.my.id/" target="_blank" class="inline-block mt-3 text-primary hover:underline">Lihat Aplikasi →</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white dark:bg-gray-900 rounded-2xl shadow overflow-hidden hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="img/bjms.png" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-xl">Company Profile</h3>
+                        <p class="text-gray-500 text-sm">PT Budijaya Makmur Sentosa</p>
+                        <a href="https://bjmsgroup.com/" target="_blank" class="inline-block mt-3 text-primary hover:underline">Lihat Aplikasi →</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!-- Experience -->
+    <section id="experience" class="py-20 bg-gradient-to-b from-gray-100 to-white dark:from-gray-800 dark:to-gray-900">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center text-primary" data-aos="fade-up">Pengalaman Kerja</h2>
+
+            <div class="relative border-l-4 border-primary pl-6 space-y-10">
+
+                <!-- Item 1 -->
+                <div data-aos="fade-right">
+                    <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition">
+                        <span class="text-sm text-primary font-semibold">2020</span>
+                        <h3 class="text-xl font-bold mt-1">Desain Grafis</h3>
+                        <p class="text-gray-500 text-sm mb-2">PT Logikreasi Utama</p>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Membuat desain promosi di sosial media seperti Instagram dan Facebook
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div data-aos="fade-right" data-aos-delay="100">
+                    <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition">
+                        <span class="text-sm text-primary font-semibold">2020 - 2022</span>
+                        <h3 class="text-xl font-bold mt-1">Web Developer</h3>
+                        <p class="text-gray-500 text-sm mb-2">PT Ebunga Sukses Makmur</p>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Mengerjakan suatu project E-Commerce dibidang Papan Bunga
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div data-aos="fade-right" data-aos-delay="100">
+                    <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition">
+                        <span class="text-sm text-primary font-semibold">2022</span>
+                        <h3 class="text-xl font-bold mt-1">Web Developer & IT Support</h3>
+                        <p class="text-gray-500 text-sm mb-2">PT Budijaya SUkses Makmur</p>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Membangun suatu website perusahaan dan pemeliharaan software dan hardware perusahaan
+                        </p>
+                    </div>
+                </div>
+
+
+                <div data-aos="fade-right" data-aos-delay="100">
+                    <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition">
+                        <span class="text-sm text-primary font-semibold">2022 - 2026</span>
+                        <h3 class="text-xl font-bold mt-1">Web Developer, IT Support & Desain Grafis</h3>
+                        <p class="text-gray-500 text-sm mb-2">PT Sinar Aneka Niaga</p>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Membangun suatu website perusahaan, pemeliharaan software dan hardware perusahaan juga mengelola sosial media perusahaan
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 bg-gray-100 dark:bg-gray-800">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-10 text-primary" data-aos="fade-up">Kontak</h2>
+
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <!-- Email -->
+                <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition" data-aos="zoom-in">
+                    <div class="text-4xl mb-3">📧</div>
+                    <h3 class="font-semibold text-lg">Email</h3>
+                    <p class="text-gray-500 text-sm">nusadigital96@gmail.com</p>
+                    <a href="mailto:nusadigital96@gmail.com" class="text-primary mt-3 inline-block hover:underline">Kirim Email</a>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="text-4xl mb-3">📱</div>
+                    <h3 class="font-semibold text-lg">WhatsApp</h3>
+                    <p class="text-gray-500 text-sm">083867262985</p>
+                    <a href="https://wa.me/6283867262985" target="_blank" class="text-primary mt-3 inline-block hover:underline">Chat Sekarang</a>
+                </div>
+
+                <!-- Alamat -->
+                <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-4xl mb-3">📍</div>
+                    <h3 class="font-semibold text-lg">Alamat</h3>
+                    <p class="text-gray-500 text-sm">Stabat Kabupaten Langkat</p>
+                    <span class="text-primary mt-3 inline-block">Lokasi Saya</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="text-center py-6 bg-gray-100 dark:bg-gray-800">
+        <p class="text-gray-500">© 2026 ALDIdev</p>
+    </footer>
+
+    <!-- JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        function toggleDark() {
+            document.documentElement.classList.toggle('dark');
+        }
+
+        // Typing Effect
+        const text = "Fullstack Developer | Laravel • React • Tailwind";
+        let i = 0;
+
+        function typing() {
+            if (i < text.length) {
+                document.getElementById("typing").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typing, 50);
+            }
+        }
+        typing();
+    </script>
+
+</body>
+
+</html>
